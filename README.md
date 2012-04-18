@@ -11,13 +11,13 @@ See **[Wordpress with Twitter account Full Documentation](http://xaviesteve.com/
 Installation
 -------------------------------------------------------------
 
-1. Download the plugin and upload it to your plugins folder as you would do with any other Wordpress plugin
+1. Download the plugin and upload it to your `plugins` folder as you would do with any other Wordpress plugin
 
-2. Create a new app at Twitter here
+2. Create a new app at Twitter **[here](https://dev.twitter.com/apps/)**
 
-3. Copy the Consumer Key and Consumer Secret and paste them in twitterlogin.php
+3. Copy the Consumer Key and Consumer Secret and paste them in `twitterlogin.php`
 
-4. Change the $salt variable to something long and complicated
+4. Change the `$salt` variable to something long and complicated
 
 5. Optionally, you can change the username prefix to something else to increase security
 
@@ -41,4 +41,4 @@ To retrieve data from someone else do something like this:
 	echo 'Username: ' . $user_info->nickname;
 
 
-More information at See **[Wordpress with Twitter account Full Documentation](http://xaviesteve.com/3128/register-in-wordpress-with-twitter-account-plugin/)**.
+More information at **[Wordpress with Twitter account Full Documentation](http://xaviesteve.com/3128/register-in-wordpress-with-twitter-account-plugin/)**.
