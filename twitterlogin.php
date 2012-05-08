@@ -4,7 +4,7 @@ Plugin Name: TwitterLogin
 Plugin URI: 
 Description: Enables users to register in Wordpress through a Twitter account in a simple click using OAuth. The plugin can also block the Admin Panel for Twitter users (recommended).
 Author: Xavi Esteve
-Version: 0.1
+Version: 0.2
 Author URI: http://xaviesteve.com/
 Credits: Matt Harris, Callum Macdonald
 */
@@ -85,7 +85,7 @@ class TwitterLogin {
 	 */
 	public function twitter_init() {
 		global $tmhOAuth;
-		session_start();
+		if (!isset($_SESSION)) {session_start();}
 		
 		require_once('tmhOAuth/tmhOAuth.php');
 		require_once('tmhOAuth/tmhUtilities.php');
@@ -192,6 +192,7 @@ class TwitterLogin {
 					"nickname" => $resp->screen_name,
 				);
 				$extraarray = array(
+					"twitterid" => $resp->id,
 					"lang" => $resp->en,
 					"profile_image_url" => $resp->profile_image_url,
 					"followers_count" => $resp->followers_count,
