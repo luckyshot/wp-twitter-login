@@ -193,7 +193,7 @@ class TwitterLogin {
 				);
 				$extraarray = array(
 					"twitterid" => $resp->id,
-					"lang" => $resp->en,
+					"lang" => $resp->lang,
 					"profile_image_url" => $resp->profile_image_url,
 					"followers_count" => $resp->followers_count,
 					"friends_count" => $resp->friends_count,
