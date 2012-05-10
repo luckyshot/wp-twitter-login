@@ -7,6 +7,10 @@ Author: Xavi Esteve
 Version: 0.2
 Author URI: http://xaviesteve.com/
 Credits: Matt Harris, Callum Macdonald
+
+
+Use get_login_link() and get_logout_link() to get the link to login/logout 
+
 */
 
 class TwitterLogin {
@@ -42,11 +46,11 @@ class TwitterLogin {
 	/**
 	 * Login/Logout links
 	 */	
-	public function view_login_link() {
-		return ''.get_bloginfo('url').'/?tw=login';
+	public function get_login_link() {
+		return ''.get_bloginfo('url').'/?tw=login&authenticate=1';
 	}
 	
-	public function view_logout_link() {
+	public function get_logout_link() {
 		return ''.get_bloginfo('url').'/?tw=logout';
 	}
 	
